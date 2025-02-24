@@ -1,5 +1,6 @@
 document.getElementById('btn').addEventListener('click', (event) => {
 const loading = document.getElementsByClassName('contenedor-loader');
+const link = document.getElementById('link');
 
 if (loading.length > 0) {
 loading[0].style.display = 'flex';
@@ -35,7 +36,7 @@ const shortUrl = await acortarUrl(urlTMP);
 if (loading.length > 0) {
 loading[0].style.display = 'none';
 }
-
+link.style.display='flex';
 document.getElementById('link').innerHTML = `<a href="${shortUrl}">LINK GENERADO</a>`;
 } catch (error) {
 console.error('Error al acortar la URL:', error.message);
