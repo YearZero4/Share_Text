@@ -1,4 +1,5 @@
-	async function acortarUrl(link) {
+document.getElementById('btn').addEventListener('click', (event) => {
+async function acortarUrl(link) {
     const response = await fetch('https://acut0x.onrender.com/', {
         method: 'POST',
         body: new URLSearchParams({ url: link }),
@@ -41,4 +42,4 @@ fetch("https://tmpfiles.org/api/v1/upload", {
 .catch((error) => {
  console.error("Error en la solicitud:", error);
 });
-
+});
