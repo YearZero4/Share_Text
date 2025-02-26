@@ -37,7 +37,7 @@ if (loading.length > 0) {
 loading[0].style.display = 'none';
 }
 link.style.display='flex';
-document.getElementById('link').textContent = `<a href="${shortUrl}">LINK GENERADO</a>`;
+document.getElementById('link').innerHTML = `<a href="${shortUrl}">LINK GENERADO</a>`;
 } catch (error) {
 console.error('Error al acortar la URL:', error.message);
 }
