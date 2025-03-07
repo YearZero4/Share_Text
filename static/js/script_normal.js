@@ -20,7 +20,7 @@ const text = document.getElementById('text').value;
 const name = document.getElementById('filename').value;
 const blob = new Blob([text], { type: "text/plain" });
 const formData = new FormData();
-formData.append("file", blob, `${name}`);
+formData.append("file", blob, `${name}.txt`);
 fetch("https://tmpfiles.org/api/v1/upload", {
  method: "POST",
  body: formData,
